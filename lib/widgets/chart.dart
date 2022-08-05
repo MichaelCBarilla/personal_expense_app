@@ -50,7 +50,9 @@ class Chart extends StatelessWidget {
               child: ChartBar(
                 dailyTransactions['day'],
                 dailyTransactions['amount'],
-                totalSpending == 0.0 ? 0.0 : (dailyTransactions['amount'] as double) / totalSpending,
+                totalSpending == 0.0
+                    ? 0.0
+                    : (dailyTransactions['amount'] as double) / totalSpending,
               ),
             );
           }).toList(),
