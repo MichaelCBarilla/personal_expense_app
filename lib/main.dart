@@ -115,13 +115,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
-            middle: Text('Personal Expenses'),
+            middle: const Text('Personal Expenses'),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 GestureDetector(
                   onTap: () => _startAddNewTransaction(context),
-                  child: Icon(CupertinoIcons.add),
+                  child: const Icon(CupertinoIcons.add),
                 ),
               ],
             ),
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
             actions: [
               IconButton(
                 onPressed: () => _startAddNewTransaction(context),
-                icon: Icon(Icons.add),
+                icon: const Icon(Icons.add),
               ),
             ],
           );
