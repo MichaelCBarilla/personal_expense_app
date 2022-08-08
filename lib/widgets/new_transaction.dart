@@ -34,14 +34,14 @@ class _NewTransactionState extends State<NewTransaction> {
 
   @override
   void didUpdateWidget(NewTransaction oldWidget) {
-    super.didUpdateWidget(oldWidget);
     print('didUpdateWidget()');
+    super.didUpdateWidget(oldWidget);
   }
 
   @override
   void dispose() {
-    super.dispose();
     print('dispose()');
+    super.dispose();
   }
 
   void _submitData() {
