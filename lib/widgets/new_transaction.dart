@@ -6,16 +6,43 @@ import 'adaptive_flat_button.dart';
 class NewTransaction extends StatefulWidget {
   final Function newTransactionHandler;
 
-  NewTransaction(this.newTransactionHandler);
+  NewTransaction(this.newTransactionHandler) {
+    print('Constructor NewTransaction Widget');
+  }
 
   @override
-  State<NewTransaction> createState() => _NewTransactionState();
+  State<NewTransaction> createState() {
+    print('createState NewTransaction Widget');
+    return _NewTransactionState();
+  }
 }
 
 class _NewTransactionState extends State<NewTransaction> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
   DateTime _selectedDate;
+
+  _NewTransactionState() {
+    print('Constructor NewTransaction State');
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print('initState()');
+  }
+
+  @override
+  void didUpdateWidget(NewTransaction oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print('didUpdateWidget()');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print('dispose()');
+  }
 
   void _submitData() {
     if (_amountController.text.isEmpty) {
@@ -79,7 +106,7 @@ class _NewTransactionState extends State<NewTransaction> {
               ),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'amount',
+                  labelText: 'Amount',
                 ),
                 controller: _amountController,
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
